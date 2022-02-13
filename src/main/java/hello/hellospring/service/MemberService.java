@@ -10,7 +10,11 @@ import java.util.Optional;
 public class MemberService {
     // Service는 비지니스, Repository는 개발 롤에 맞게록 용어를 설계한다.
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     public Long join(Member member) {
         validateDuplicateMember(member); // 중복된 이름의 회원 검증
