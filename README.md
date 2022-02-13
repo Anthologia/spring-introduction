@@ -25,3 +25,7 @@
 - domain 객체를 관리하기 위한 Repository 구성
   - DBMS가 정해지지 않았다는 가정 하에 repository interface 구성  
   - 대안으로 memoryRepository를 구현 
+### 2) 회원 리포지토리 테스트 케이스 작성
+- @AfterEach를 사용한 테스트 케이스 작성
+  - [Tip 1] : 순서에 의존적인 설계는 지양하자
+  - [Tip 2] : 테스트 하나가 끝나면 항상 데이터를 클리어 시키자
