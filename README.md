@@ -9,3 +9,6 @@
 
 ## 2. 스프링 웹 개발 기초
 ### 1) 정적 컨텐츠
+### 2) MVC와 템플릿 엔진
+- @RequestParam을 사용한 Controller 구성
+- Controller와 viewResolver, Template engine 간의 기본적인 상호작용 살펴보기
