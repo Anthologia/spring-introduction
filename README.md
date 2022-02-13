@@ -18,3 +18,10 @@
   - 객체를 반환할 경우, MappingJackson2HttpMessageConveter가 호출되어 사용된다.  
     이때, 객체의 멤버변수 접근지정자가 private라면 getter가 있어야만 노출된다.
 
+## 3. 회원 관리 예제 - 백엔드 개발
+### 1) 비즈니스 요구사항 정리
+### 2) 회원 도메인과 리포지토리 만들기
+- 요구사항에 맞는 객체 domain 구현
+- domain 객체를 관리하기 위한 Repository 구성
+  - DBMS가 정해지지 않았다는 가정 하에 repository interface 구성  
+  - 대안으로 memoryRepository를 구현 
