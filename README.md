@@ -54,3 +54,6 @@
 ## 5. 회원 관리 예제 - 웹 MVC 개발
 ### 1) 회원 웹 기능 - 홈 화면 추가
 - Controller를 추가하여 홈 화면이 뜨도록 매핑
+### 2) 회원 웹 기능 - 등록
+- 데이터를 전달 받을 form 객체 구성
+- @PostMapping을 사용한 Controller method 구현
