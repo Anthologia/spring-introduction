@@ -15,8 +15,8 @@
 ### 3) API
 - @ResponseBody를 사용한 Controller 구성
 - @ResponseBody를 사용한 Controller와 HttpMessageConveter 간의 기본적인 상호작용 살펴보기
-  - 객체를 반환할 경우, MappingJackson2HttpMessageConveter가 호출되어 사용된다.  
-    이때, 객체의 멤버변수 접근지정자가 private라면 getter가 있어야만 노출된다.
+  - 객체를 반환할 경우, MappingJackson2HttpMessageConveter가 호출되어 사용된다  
+    이때, 객체의 멤버변수 접근지정자가 private라면 getter가 있어야만 노출된다
 
 ## 3. 회원 관리 예제 - 백엔드 개발
 ### 1) 비즈니스 요구사항 정리
@@ -37,3 +37,9 @@
 - @BeforeEach를 사용한 테스트 케이스 작성
   - 테스트가 서로 영향이 없도록 새로운 객체와 의존관계를 맺음
   - 이를 위해, 기존 service 코드를 DI 가능하게 변경
+
+## 4. 스프링 빈과 의존관계
+### 1) 컴포넌트 스캔과 자동 의존관계 설정
+- @Service, @Repository, @Controller를 통한 컴포넌트 스캔과 Spring Bean 등록
+  - Spring Bean은 기본적으로 싱글톤으로 등록된다
+- @Autowired를 통한 DI
