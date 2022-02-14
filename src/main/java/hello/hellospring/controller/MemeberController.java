@@ -9,6 +9,16 @@ public class MemeberController {
 
     private final MemberService memberService;
 
+    // DI : Field Injection
+    // @Autowired private MemberService memberService;
+
+    // DI : Setter Injection
+    // @Autowired
+    // public void setMemberService(MemberService memberService) {
+    //     this.memberService = memberService;
+    // }
+
+    // DI : Constructor Injection
     @Autowired
     public MemeberController(MemberService memberService) {
         this.memberService = memberService;

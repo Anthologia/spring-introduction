@@ -43,3 +43,10 @@
 - @Service, @Repository, @Controller를 통한 컴포넌트 스캔과 Spring Bean 등록
   - Spring Bean은 기본적으로 싱글톤으로 등록된다
 - @Autowired를 통한 DI
+### 2) 자바 코드로 직접 스프링 빈 등록하기
+- @Configuration과 @Bean을 통한 Spring Bean 등록
+- 세 가지의 DI 방법
+  - Field Injection : Application 조립 전 변경할 방법이 없어 지양한다
+  - Setter Injection : public으로 노출이 되면, Application 조립 후, 변경 위험성이 있어 지양한다
+  - Constructor Injection : Application이 조립된 이후 변경을 막아주기 때문에 안전하다
+- [Tip 5] : @Autowired를 통한 DI는 Spring container에 등록된 객체에서만 동작한다
