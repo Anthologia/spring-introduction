@@ -50,3 +50,7 @@
   - Setter Injection : public으로 노출이 되면, Application 조립 후, 변경 위험성이 있어 지양한다
   - Constructor Injection : Application이 조립된 이후 변경을 막아주기 때문에 안전하다
 - [Tip 5] : @Autowired를 통한 DI는 Spring container에 등록된 객체에서만 동작한다
+
+## 5. 회원 관리 예제 - 웹 MVC 개발
+### 1) 회원 웹 기능 - 홈 화면 추가
+- Controller를 추가하여 홈 화면이 뜨도록 매핑
