@@ -57,3 +57,5 @@
 ### 2) 회원 웹 기능 - 등록
 - 데이터를 전달 받을 form 객체 구성
 - @PostMapping을 사용한 Controller method 구현
+### 3) 회원 웹 기능 - 조회
+- thymeleaf를 사용한 HTML 페이지 구성 
