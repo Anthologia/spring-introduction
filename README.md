@@ -63,3 +63,9 @@
 ## 6. 스프링 DB 접근 기술
 ### 1) H2 데이터베이스 설치
  - H2 Database 설치 및 테이블 생성
+### 2) Jdbc 리포지토리 구현
+ - JdbcRepository 생성 및 Jdbc API를 통한 SQL 조작 구현
+ - ❗️느낀점 : memoryRepository를 기반으로 Service를 구현하였기 때문에,
+          이를 JdbcRepository로 바꾸어 사용하려면 Service의 코드 변경이 수반될 것이라고 생각했다.
+          그러나 그 둘은 repository interface를 구현하여 만들어졌기에 다형성을 이용해 Service의 코드 변경이 필요하지 않았다.
+          이번 내용을 통해 실무에 적용가능한 OOP의 강력함, Spring과 DI에 대해 조금이나마 깨닫게 되었다.
