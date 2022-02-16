@@ -74,3 +74,5 @@
    - 🔨 시행착오 : @Transactional이 있으면 테스트 완료 후, 롤백 시키기 때문에 DB 상에서 테스트 데이터를 확인할 수 없다.  
        그러므로 테스트 데이터 확인을 위해서는 @Transactional을 제거하거나, 실행할 메소드 혹은 클래스에 @Rollback(false) 혹은 @Commit 을 추가하면 된다.
  - [Tip 6] : 모든 기능을 쪼개어 단위 테스트가 가능해야 좋은 테스트 설계일 확률이 높다. 통합 테스트보다는 단위 테스트를 지향하자.
+### 4) JdbcTemplate
+ - JdbcTemplate을 활용한 Repository 생성
