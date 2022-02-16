@@ -69,3 +69,8 @@
           이를 JdbcRepository로 바꾸어 사용하려면 Service의 코드 변경이 수반될 것이라고 생각했다.
           그러나 그 둘은 repository interface를 구현하여 만들어졌기에 다형성을 이용해 Service의 코드 변경이 필요하지 않았다.
           이번 내용을 통해 실무에 적용가능한 OOP의 강력함, Spring과 DI에 대해 조금이나마 깨닫게 되었다.
+### 3) 스프링 통합 테스트
+ - @SpringBootTest와 @Transactional을 활용한 통합 테스트 실행
+   - 🔨 시행착오 : @Transactional이 있으면 테스트 완료 후, 롤백 시키기 때문에 DB 상에서 테스트 데이터를 확인할 수 없다.  
+       그러므로 테스트 데이터 확인을 위해서는 @Transactional을 제거하거나, 실행할 메소드 혹은 클래스에 @Rollback(false) 혹은 @Commit 을 추가하면 된다.
+ - [Tip 6] : 모든 기능을 쪼개어 단위 테스트가 가능해야 좋은 테스트 설계일 확률이 높다. 통합 테스트보다는 단위 테스트를 지향하자.
