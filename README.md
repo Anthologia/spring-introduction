@@ -87,3 +87,9 @@
  - ❗️느낀점 : findBy와 같은 키워드를 통해 원하는 쿼리를 만들어 낼 수 있다는 점이 놀라웠다.  
             이에 대한 자세한 내용이 궁금하여 확인해보니 아래 링크에서 다양한 magic keywords를 확인할 수 있었다.  
             [https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details)
+
+## 7. AOP
+### 1) AOP가 필요한 상황
+- 공통 관심 사항(cross-cutting concern)과 핵심 관심 사항(core concern)에 대한 이해
+- 둘의 코드가 섞여 유지보수 용이성이 우려되는 경우가 AOP가 필요한 상황이라고 할 수 있다
+
