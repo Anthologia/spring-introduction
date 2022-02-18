@@ -90,6 +90,13 @@
 
 ## 7. AOP
 ### 1) AOP가 필요한 상황
-- 공통 관심 사항(cross-cutting concern)과 핵심 관심 사항(core concern)에 대한 이해
-- 둘의 코드가 섞여 유지보수 용이성이 우려되는 경우가 AOP가 필요한 상황이라고 할 수 있다
-
+ - 공통 관심 사항(cross-cutting concern)과 핵심 관심 사항(core concern)에 대한 이해
+ - 둘의 코드가 섞여 유지보수 용이성이 우려되는 경우가 AOP가 필요한 상황이라고 할 수 있다
+### 2) AOP 적용
+ - @Aspect과 @Around를 사용한 AOP 구현
+ - AOP를 스프링에 등록할 때는 @Component를 사용해도 되지만, AOP 같은 경우 Spring @Bean에 등록하여 사용하는 것을 선호한다.
+   그 이유는 AOP는 정형화된 것이 아니기에 인지할 수 있는 것이 더 좋기 때문이다. 
+   - 🔨 시행착오 : SpringConfig @Bean에 AOP 메소드를 등록한 상태에서, @Around를 활용해 애플리케이션 패키지 하위의 모든 것에 AOP를 적용하였더니, 순환참조 오류가 발생하였다.
+                 이는 @Around를 통해 SpringConfig의 AOP 메서드도 AOP로 처리하기 때문이다.
+                 문제를 해결하기 위해서는 @Bean이 아닌 @Component를 사용하거나, @Around의 AOP 대상에서 SpringConfig을 제거함으로써 해결할 수 있었다.
+ - Spring은 프록시를 통해 AOP가 가능하게 만든다
