@@ -5,10 +5,13 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
+// JPA는 데이터 변경이 모두 @Transactional 안에서 실행되어야 한다
 public class MemberService {
     // Service는 비지니스, Repository는 개발 롤에 맞게록 용어를 설계한다.
 

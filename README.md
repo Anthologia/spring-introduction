@@ -71,8 +71,14 @@
           이번 내용을 통해 실무에 적용가능한 OOP의 강력함, Spring과 DI에 대해 조금이나마 깨닫게 되었다.
 ### 3) 스프링 통합 테스트
  - @SpringBootTest와 @Transactional을 활용한 통합 테스트 실행
-   - 🔨 시행착오 : @Transactional이 있으면 테스트 완료 후, 롤백 시키기 때문에 DB 상에서 테스트 데이터를 확인할 수 없다.  
-       그러므로 테스트 데이터 확인을 위해서는 @Transactional을 제거하거나, 실행할 메소드 혹은 클래스에 @Rollback(false) 혹은 @Commit 을 추가하면 된다.
- - [Tip 6] : 모든 기능을 쪼개어 단위 테스트가 가능해야 좋은 테스트 설계일 확률이 높다. 통합 테스트보다는 단위 테스트를 지향하자.
-### 4) JdbcTemplate
+   - 🔨 시행착오 : @Transactional이 있으면 테스트 완료 후, 롤백 시키기 때문에 DB 상에서 테스트 데이터를 확인할 수 없다  
+       그러므로 테스트 데이터 확인을 위해서는 @Transactional을 제거하거나, 실행할 메소드 혹은 클래스에 @Rollback(false) 혹은 @Commit 을 추가하면 된다
+ - [Tip 6] : 모든 기능을 쪼개어 단위 테스트가 가능해야 좋은 테스트 설계일 확률이 높다. 통합 테스트보다는 단위 테스트를 지향하자
+### 4) 스프링 JdbcTemplate
  - JdbcTemplate을 활용한 Repository 생성
+### 5) JPA
+ - JPA를 통한 Repository 생성
+ - @Id, @GeneratedValue, @Column을 사용한 JPA Entity mapping
+ - SpringConfig에서 EntityManager는 생성자 DI도 되지만, @PersistenceContext 를 사용하는 것도 가능하다
+ - JPA를 통한 모든 데이터 변경은 Transaction 안에서 실행해야 한다
+ - [Tip 7] : PK 기반 서칭이 아닌 메소드는 보통 JPQL 작성이 필요하다
