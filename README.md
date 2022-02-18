@@ -82,3 +82,8 @@
  - SpringConfig에서 EntityManager는 생성자 DI도 되지만, @PersistenceContext 를 사용하는 것도 가능하다
  - JPA를 통한 모든 데이터 변경은 Transaction 안에서 실행해야 한다
  - [Tip 7] : PK 기반 서칭이 아닌 메소드는 보통 JPQL 작성이 필요하다
+### 6) 스프링 데이터 JPA
+ - 스프링 데이터 JPA를 통한 Repository interface 구현
+ - ❗️느낀점 : findBy와 같은 키워드를 통해 원하는 쿼리를 만들어 낼 수 있다는 점이 놀라웠다.  
+            이에 대한 자세한 내용이 궁금하여 확인해보니 아래 링크에서 다양한 magic keywords를 확인할 수 있었다.  
+            [https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details)
