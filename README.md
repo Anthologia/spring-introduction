@@ -100,3 +100,5 @@
                  이는 @Around를 통해 SpringConfig의 AOP 메서드도 AOP로 처리하기 때문이다.
                  문제를 해결하기 위해서는 @Bean이 아닌 @Component를 사용하거나, @Around의 AOP 대상에서 SpringConfig을 제거함으로써 해결할 수 있었다.
  - Spring은 프록시를 통해 AOP가 가능하게 만든다
+ 
+## 8. 다음으로
