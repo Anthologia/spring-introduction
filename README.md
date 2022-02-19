@@ -102,3 +102,5 @@
  - Spring은 프록시를 통해 AOP가 가능하게 만든다
  
 ## 8. 다음으로
+### 스프링 핵심 원리 (기본편)
+- [https://github.com/Anthologia/spring-core-basic](https://github.com/Anthologia/spring-core-basic)
